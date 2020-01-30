@@ -1,0 +1,32 @@
+﻿@model List<SchoolExerciseMVC.Models.ViewModel.SchoolList>
+@{
+    ViewBag.Title = "Index";
+
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Year</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+        @foreach (var oElement in Model)
+        {
+            <tr>
+
+                <td>@oElement.Id</td>
+                <td>@oElement.Name</td>
+                <td>@oElement.Year</td>
+            </tr>
+
+        }
+    </tbody>
+</table>
